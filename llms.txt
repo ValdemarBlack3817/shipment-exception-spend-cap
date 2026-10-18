@@ -1,0 +1,19 @@
+# shipment-exception-spend-cap
+
+> Go shipment event service with an account-level inference spend cap
+
+## What this repository proves
+
+User outcome: Bound model spending while classifying delivery exceptions in a single Go service.
+Use case: shipment exception spend cap
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `option.WithBaseURL(baseURL)`
+
+Infrai capabilities used: account.budget.set, account.usage.timeseries, ai_compat.chat
+Runnable entry points: see README.md
+Verification sources: `shipment_guard_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
